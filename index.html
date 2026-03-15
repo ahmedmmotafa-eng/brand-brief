@@ -1,4 +1,9 @@
-
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بريف الـ براند — Ahmed Taftzany</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -9,23 +14,6 @@ body{font-family:'Cairo',sans-serif;direction:rtl;background:#ddd8f0;}
 .blob-2{width:420px;height:420px;background:#8B6FE8;top:80px;right:-100px;opacity:.25;}
 .blob-3{width:380px;height:380px;background:#4B20D4;bottom:0;left:40%;opacity:.2;}
 .page{position:relative;z-index:1;max-width:660px;margin:0 auto;padding:2rem 1rem 5rem;}
-
-/* SETUP CARD */
-.setup-card{background:rgba(255,255,255,.95);border:2px solid #7B52F4;border-radius:24px;padding:1.5rem;margin-bottom:1.5rem;}
-.setup-title{font-size:15px;font-weight:800;color:#3B1FC8;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
-.setup-step{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;}
-.sn{width:26px;height:26px;border-radius:50%;background:#5B2FF4;color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
-.st{font-size:13px;color:#2d2055;line-height:1.7;}
-.st a{color:#5B2FF4;font-weight:700;}
-.config-row{display:flex;gap:8px;align-items:center;margin-top:6px;}
-.cfg-input{flex:1;padding:9px 12px;background:#f5f2ff;border:1.5px solid #ddd6f8;border-radius:10px;font-family:'Cairo',sans-serif;font-size:13px;color:#1a1040;outline:none;direction:ltr;}
-.cfg-input:focus{border-color:#7B52F4;background:#fff;}
-.cfg-label{font-size:11px;font-weight:700;color:#5B2FF4;min-width:90px;text-align:right;}
-.save-btn{width:100%;padding:12px;background:linear-gradient(135deg,#5B2FF4,#8B62F8);color:#fff;border:none;border-radius:12px;font-family:'Cairo',sans-serif;font-size:14px;font-weight:800;cursor:pointer;margin-top:12px;}
-.save-btn:hover{opacity:.9;}
-.saved-badge{display:none;background:#E1F5EE;border:1.5px solid #9FE1CB;border-radius:12px;padding:10px 14px;font-size:13px;color:#085041;font-weight:600;margin-top:10px;text-align:center;}
-
-/* HEADER */
 .header{background:rgba(60,20,180,.82);backdrop-filter:blur(30px);border:1.5px solid rgba(255,255,255,.35);border-radius:28px;padding:2.5rem 2rem 2.25rem;margin-bottom:1.5rem;position:relative;overflow:hidden;}
 .header::after{content:'';position:absolute;width:200px;height:200px;background:radial-gradient(circle,rgba(196,241,53,.18) 0%,transparent 70%);bottom:-50px;left:10px;border-radius:50%;}
 .hd-top{display:flex;align-items:center;gap:12px;margin-bottom:2rem;position:relative;z-index:2;}
@@ -64,8 +52,6 @@ body{font-family:'Cairo',sans-serif;direction:rtl;background:#ddd8f0;}
 .btn-next{flex:1;padding:14px;background:linear-gradient(135deg,#5B2FF4,#8B62F8);color:#fff;border:none;border-radius:16px;font-family:'Cairo',sans-serif;font-size:15px;font-weight:800;cursor:pointer;}
 .btn-back{padding:14px 20px;background:#f5f2ff;border:1.5px solid #ddd6f8;border-radius:16px;font-family:'Cairo',sans-serif;font-size:13px;font-weight:700;color:#5B2FF4;cursor:pointer;}
 .btn-back:hover{background:#ede8ff;}
-
-/* PRINT */
 .brief-print{display:none;}
 .print-bar{background:rgba(255,255,255,.97);border:1.5px solid #ddd6f8;border-radius:20px;padding:14px 18px;display:flex;gap:10px;align-items:center;justify-content:space-between;margin-bottom:16px;}
 .print-btn{padding:13px 24px;background:linear-gradient(135deg,#5B2FF4,#8B62F8);color:#fff;border:none;border-radius:14px;font-family:'Cairo',sans-serif;font-size:14px;font-weight:800;cursor:pointer;}
@@ -95,35 +81,19 @@ body{font-family:'Cairo',sans-serif;direction:rtl;background:#ddd8f0;}
 .bp-fl{font-size:11px;font-weight:700;color:#5B2FF4;}
 .bp-fr{font-size:11px;color:#aaa;}
 @media print{
-  .bg-wrap,.print-bar,.setup-card,.prog-wrap,.header{display:none!important;}
+  .bg-wrap,.print-bar,.prog-wrap,.header{display:none!important;}
   .brief-print{display:block!important;}
   body{background:#fff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
   .page{padding:0!important;max-width:100%!important;}
   @page{margin:10mm;size:A4;}
 }
 </style>
+</head>
+<body>
 
 <div class="bg-wrap"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
 <div class="page">
 
-  <!-- SETUP -->
-  <div class="setup-card" id="setupCard">
-    <div class="setup-title">⚙️ إعداد الإيميل الأوتوماتيك — مرة واحدة بس</div>
-    <div class="setup-step"><div class="sn">1</div><div class="st">اعمل حساب مجاني على <a href="https://www.emailjs.com" target="_blank">emailjs.com</a></div></div>
-    <div class="setup-step"><div class="sn">2</div><div class="st">من لوحة التحكم: Add New Service — اختار Gmail أو أي إيميل — وخد الـ <strong>Service ID</strong></div></div>
-    <div class="setup-step"><div class="sn">3</div><div class="st">من Email Templates: اعمل template جديد وخد الـ <strong>Template ID</strong><br><span style="color:#888;font-size:12px;">في الـ template اكتب: Subject = بريف براند جديد | Body = {{{message}}}</span></div></div>
-    <div class="setup-step"><div class="sn">4</div><div class="st">من Account → API Keys: خد الـ <strong>Public Key</strong></div></div>
-    <div style="margin-top:14px;">
-      <div class="config-row"><span class="cfg-label">Service ID</span><input class="cfg-input" id="cfg_sid" placeholder="service_xxxxxxx"></div>
-      <div class="config-row"><span class="cfg-label">Template ID</span><input class="cfg-input" id="cfg_tid" placeholder="template_xxxxxxx"></div>
-      <div class="config-row"><span class="cfg-label">Public Key</span><input class="cfg-input" id="cfg_key" placeholder="xxxxxxxxxxxxxxxxxxxx"></div>
-      <div class="config-row"><span class="cfg-label">إيميلك</span><input class="cfg-input" id="cfg_email" placeholder="you@gmail.com" type="email"></div>
-    </div>
-    <button class="save-btn" onclick="saveConfig()">حفظ الإعداد ✓</button>
-    <div class="saved-badge" id="savedBadge">✅ تم حفظ الإعداد — البريف هيتبعتلك أوتوماتيك</div>
-  </div>
-
-  <!-- FORM -->
   <div id="formUI">
     <div class="header">
       <div class="hd-top"><div class="hd-avatar">AT</div><div><div class="hd-name">Ahmed Taftzany</div><div class="hd-sub">brand strategy building</div></div></div>
@@ -194,7 +164,6 @@ body{font-family:'Cairo',sans-serif;direction:rtl;background:#ddd8f0;}
     </div>
   </div>
 
-  <!-- PRINT VIEW -->
   <div class="brief-print" id="briefPrint">
     <div class="print-bar">
       <button class="back-edit-btn" onclick="goBack()">→ تعديل</button>
@@ -210,25 +179,19 @@ body{font-family:'Cairo',sans-serif;direction:rtl;background:#ddd8f0;}
     <div class="bp-body" id="bp_body"></div>
     <div class="bp-footer"><span class="bp-fl">Ahmed Taftzany — brand strategy building</span><span class="bp-fr" id="bp_fr"></span></div>
   </div>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
 var D = {};
-var CFG = { sid:'', tid:'', key:'', email:'' };
-
-function saveConfig() {
-  CFG.sid   = document.getElementById('cfg_sid').value.trim();
-  CFG.tid   = document.getElementById('cfg_tid').value.trim();
-  CFG.key   = document.getElementById('cfg_key').value.trim();
-  CFG.email = document.getElementById('cfg_email').value.trim();
-  if (CFG.sid && CFG.tid && CFG.key) {
-    emailjs.init(CFG.key);
-    document.getElementById('savedBadge').style.display = 'block';
-  } else {
-    alert('من فضلك ادخل الـ Service ID و Template ID و Public Key');
-  }
-}
+var CFG = {
+  sid:   'service_24gjlx8',
+  tid:   'template_73a5kmk',
+  key:   'R_6iRgKfa_XBeoobp',
+  email: 'ahmedmmotafa@gmail.com'
+};
+emailjs.init(CFG.key);
 
 function rv(id){var e=document.getElementById(id);return e?(e.value||'').trim():'';}
 function rc(k){return(D[k]&&D[k].length)?D[k].join('، '):'';}
@@ -242,124 +205,89 @@ function bk(f){document.getElementById('s'+(f-1)).classList.remove('on');cur=f-2
 function goBack(){document.getElementById('briefPrint').style.display='none';document.getElementById('formUI').style.display='block';document.getElementById('s5').classList.add('on');cur=5;upP(5);window.scrollTo({top:0,behavior:'smooth'});}
 function xe(t){return String(t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
-function buildText(data) {
-  var lines = [
-    'بريف براند جديد — Ahmed Taftzany',
-    '====================================',
-    '',
+function buildText(data){
+  var lines=[
+    'بريف براند جديد - Ahmed Taftzany','====================================','',
     '== معلومات الشركة ==',
-    'الاسم: ' + (data.name||'-'),
-    'البراند: ' + (data.brand||'-'),
-    'المجال: ' + (data.ind||'-'),
-    'سنوات في السوق: ' + (data.yrs||'-'),
-    'الوصف: ' + (data.desc||'-'),
-    'التواصل: ' + (data.contact||'-'),
-    '',
+    'الاسم: '+(data.name||'-'),'البراند: '+(data.brand||'-'),'المجال: '+(data.ind||'-'),
+    'سنوات في السوق: '+(data.yrs||'-'),'الوصف: '+(data.desc||'-'),'التواصل: '+(data.contact||'-'),'',
     '== الرسالة والرؤية ==',
-    'لماذا التأسيس: ' + (data.mission||'-'),
-    'الرؤية 5 سنين: ' + (data.vision||'-'),
-    'القيم: ' + (data.vals||'-'),
-    'الـ Promise: ' + (data.promise||'-'),
-    '',
+    'لماذا التاسيس: '+(data.mission||'-'),'الرؤية 5 سنين: '+(data.vision||'-'),
+    'القيم: '+(data.vals||'-'),'الـ Promise: '+(data.promise||'-'),'',
     '== الجمهور المستهدف ==',
-    'الفئة العمرية: ' + (data.age||'-'),
-    'الجنس: ' + (data.gen||'-'),
-    'المستوى المادي: ' + (data.inc||'-'),
-    'مشكلة العميل: ' + (data.pain||'-'),
-    'سبب الاختيار: ' + (data.why||'-'),
-    'نوع العميل: ' + (data.btype||'-'),
-    '',
+    'الفئة العمرية: '+(data.age||'-'),'الجنس: '+(data.gen||'-'),
+    'المستوى المادي: '+(data.inc||'-'),'مشكلة العميل: '+(data.pain||'-'),
+    'سبب الاختيار: '+(data.why||'-'),'نوع العميل: '+(data.btype||'-'),'',
     '== المنافسين والـ Positioning ==',
-    'المنافسين: ' + (data.comp||'-'),
-    'الميزة التنافسية: ' + (data.diff||'-'),
-    'نقاط قوتهم: ' + (data.weak||'-'),
-    'مستوى السعر: ' + (data.price||'-'),
-    'الانتشار: ' + (data.reach||'-'),
-    '',
+    'المنافسين: '+(data.comp||'-'),'الميزة التنافسية: '+(data.diff||'-'),
+    'نقاط قوتهم: '+(data.weak||'-'),'مستوى السعر: '+(data.price||'-'),'الانتشار: '+(data.reach||'-'),'',
     '== الشخصية البصرية ==',
-    'الـ Archetype: ' + (data.arch||'-'),
-    'الألوان: ' + (data.col||'-'),
-    'الـ Voice: ' + (data.voice||'-'),
-    'البراند كشخص: ' + (data.person||'-'),
-    'هوية موجودة: ' + (data.hasv||'-'),
-    '',
+    'الـ Archetype: '+(data.arch||'-'),'الالوان: '+(data.col||'-'),
+    'الـ Voice: '+(data.voice||'-'),'البراند كشخص: '+(data.person||'-'),'هوية موجودة: '+(data.hasv||'-'),'',
     '== التسليم والتوقعات ==',
-    'المطلوب: ' + (data.del||'-'),
-    'الموعد: ' + (data.dead||'-'),
-    'الميزانية: ' + (data.bud||'-'),
-    'ملاحظات: ' + (data.notes||'-'),
-    'المصدر: ' + (data.src||'-')
+    'المطلوب: '+(data.del||'-'),'الموعد: '+(data.dead||'-'),
+    'الميزانية: '+(data.bud||'-'),'ملاحظات: '+(data.notes||'-'),'المصدر: '+(data.src||'-')
   ];
   return lines.join('\n');
 }
 
-function sendEmail(data) {
-  if (!CFG.sid || !CFG.tid || !CFG.key) return;
-  var sw = document.getElementById('emailStatusWrap');
-  sw.innerHTML = '<div class="email-status email-sending">📤 جاري إرسال البريف على إيميلك...</div>';
-  var params = {
-    to_email: CFG.email,
-    subject:  'بريف براند جديد: ' + (data.brand || 'عميل جديد'),
-    message:  buildText(data),
-    brand_name: data.brand || 'عميل جديد',
-    client_name: data.name || '-',
-    client_contact: data.contact || '-'
-  };
-  emailjs.send(CFG.sid, CFG.tid, params).then(
-    function() {
-      sw.innerHTML = '<div class="email-status email-ok">✅ اتبعت على إيميلك بنجاح</div>';
-    },
-    function(err) {
-      sw.innerHTML = '<div class="email-status email-err">⚠ مش اتبعت — تأكد من الإعداد</div>';
-      console.error(err);
-    }
+function sendEmail(data){
+  var sw=document.getElementById('emailStatusWrap');
+  sw.innerHTML='<div class="email-status email-sending">جاري الارسال...</div>';
+  emailjs.send(CFG.sid,CFG.tid,{
+    to_email:CFG.email,
+    subject:'بريف براند جديد: '+(data.brand||'عميل جديد'),
+    message:buildText(data),
+    brand_name:data.brand||'عميل جديد',
+    client_name:data.name||'-',
+    client_contact:data.contact||'-'
+  }).then(
+    function(){sw.innerHTML='<div class="email-status email-ok">تم الارسال على ايميلك</div>';},
+    function(err){sw.innerHTML='<div class="email-status email-err">مش اتبعت - تاكد من الاعداد</div>';console.error(err);}
   );
 }
 
-function submitForm() {
-  var data = {
-    name:rv('f_name'), brand:rv('f_brand'), ind:rv('f_ind'), yrs:rv('f_yrs'),
-    desc:rv('f_desc'), contact:rv('f_contact'), mission:rv('f_mission'),
-    vision:rv('f_vision'), vals:rc('vals'), promise:rv('f_promise'),
-    age:rc('age'), gen:rc('gen'), inc:rc('inc'), pain:rv('f_pain'),
-    why:rv('f_why'), btype:rc('btype'),
+function submitForm(){
+  var data={
+    name:rv('f_name'),brand:rv('f_brand'),ind:rv('f_ind'),yrs:rv('f_yrs'),
+    desc:rv('f_desc'),contact:rv('f_contact'),mission:rv('f_mission'),
+    vision:rv('f_vision'),vals:rc('vals'),promise:rv('f_promise'),
+    age:rc('age'),gen:rc('gen'),inc:rc('inc'),pain:rv('f_pain'),
+    why:rv('f_why'),btype:rc('btype'),
     comp:[rv('fc1'),rv('fc2'),rv('fc3')].filter(Boolean).join(' / '),
-    diff:rv('f_diff'), weak:rv('f_weak'), price:D['price']||'', reach:D['reach']||'',
-    arch:rc('arch'), col:rc('col'), voice:rc('voice'), person:rv('f_person'),
-    hasv:rc('hasv'), del:rc('del'), dead:rc('dead'), bud:rc('bud'),
-    notes:rv('f_notes'), src:rc('src')
+    diff:rv('f_diff'),weak:rv('f_weak'),price:D['price']||'',reach:D['reach']||'',
+    arch:rc('arch'),col:rc('col'),voice:rc('voice'),person:rv('f_person'),
+    hasv:rc('hasv'),del:rc('del'),dead:rc('dead'),bud:rc('bud'),
+    notes:rv('f_notes'),src:rc('src')
   };
-
-  var bn = data.brand || 'الشركة';
-  var today = new Date().toLocaleDateString('ar-EG');
-
-  var secs = [
+  var bn=data.brand||'الشركة';
+  var today=new Date().toLocaleDateString('ar-EG');
+  var secs=[
     {t:'معلومات الشركة',rows:[['الاسم',data.name],['البراند',data.brand],['المجال',data.ind],['السنوات',data.yrs],['الوصف',data.desc],['التواصل',data.contact]]},
-    {t:'الرسالة والرؤية',rows:[['لماذا التأسيس',data.mission],['الرؤية 5 سنين',data.vision],['القيم',data.vals],['الـ Promise',data.promise]]},
+    {t:'الرسالة والرؤية',rows:[['لماذا التاسيس',data.mission],['الرؤية 5 سنين',data.vision],['القيم',data.vals],['الـ Promise',data.promise]]},
     {t:'الجمهور المستهدف',rows:[['الفئة العمرية',data.age],['الجنس',data.gen],['المستوى المادي',data.inc],['مشكلة العميل',data.pain],['سبب الاختيار',data.why],['نوع العميل',data.btype]]},
-    {t:'المنافسين والـ Positioning',rows:[['المنافسين',data.comp],['الميزة التنافسية',data.diff],['نقاط قوتهم',data.weak],['مستوى السعر',data.price],['الانتشار',data.reach]]},
-    {t:'الشخصية البصرية',rows:[['الـ Archetype',data.arch],['الألوان',data.col],['الـ Voice',data.voice],['البراند كشخص',data.person],['هوية موجودة',data.hasv]]},
+    {t:'المنافسين',rows:[['المنافسين',data.comp],['الميزة التنافسية',data.diff],['نقاط قوتهم',data.weak],['مستوى السعر',data.price],['الانتشار',data.reach]]},
+    {t:'الشخصية البصرية',rows:[['الـ Archetype',data.arch],['الالوان',data.col],['الـ Voice',data.voice],['البراند كشخص',data.person],['هوية موجودة',data.hasv]]},
     {t:'التسليم والتوقعات',rows:[['المطلوب',data.del],['الموعد',data.dead],['الميزانية',data.bud],['ملاحظات',data.notes],['المصدر',data.src]]}
   ];
-
-  var html = '';
-  for (var s=0;s<secs.length;s++){
-    var sec=secs[s], rows='';
-    for (var r=0;r<sec.rows.length;r++){
-      var l=sec.rows[r][0], v=sec.rows[r][1];
-      if(v&&v.trim()) rows+='<div class="bp-row"><div class="bp-lbl">'+xe(l)+'</div><div class="bp-val">'+xe(v)+'</div></div>';
+  var html='';
+  for(var s=0;s<secs.length;s++){
+    var sec=secs[s],rows='';
+    for(var r=0;r<sec.rows.length;r++){
+      var l=sec.rows[r][0],v=sec.rows[r][1];
+      if(v&&v.trim())rows+='<div class="bp-row"><div class="bp-lbl">'+xe(l)+'</div><div class="bp-val">'+xe(v)+'</div></div>';
     }
-    if(rows) html+='<div class="bp-sec"><div class="bp-sec-title">'+xe(sec.t)+'</div>'+rows+'</div>';
+    if(rows)html+='<div class="bp-sec"><div class="bp-sec-title">'+xe(sec.t)+'</div>'+rows+'</div>';
   }
-
-  document.getElementById('formUI').style.display = 'none';
-  document.getElementById('bp_bn').textContent = bn;
-  document.getElementById('bp_dt').textContent = today;
-  document.getElementById('bp_fr').textContent = 'بريف ' + bn;
-  document.getElementById('bp_body').innerHTML = html;
-  document.getElementById('briefPrint').style.display = 'block';
+  document.getElementById('formUI').style.display='none';
+  document.getElementById('bp_bn').textContent=bn;
+  document.getElementById('bp_dt').textContent=today;
+  document.getElementById('bp_fr').textContent='بريف '+bn;
+  document.getElementById('bp_body').innerHTML=html;
+  document.getElementById('briefPrint').style.display='block';
   window.scrollTo({top:0,behavior:'smooth'});
-
   sendEmail(data);
 }
 </script>
+</body>
+</html>
